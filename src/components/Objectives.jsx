@@ -5,7 +5,6 @@ const SPECIFIC_OBJECTIVES = [
   'To implement an AI-driven analysis module that processes sensor data in real time, detects anomalies, and generates prioritized alerts for caregivers.',
   'To develop a web-based caregiver dashboard that presents real-time resident status, historical trends, and actionable notifications in a clear, accessible interface.',
   "To evaluate the system's accuracy, responsiveness, and usability through testing at a partner assisted living facility in Cebu.",
-  'To assess caregiver satisfaction and workload impact through structured surveys (Form B) administered before and after system deployment.',
 ];
 
 export default function Objectives() {
