@@ -1,0 +1,98 @@
+/* ── Tailwind directives ─────────────────────────────────── */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base layer overrides ────────────────────────────────── */
+@layer base {
+  html {
+    font-size: 16px;
+    @apply text-ink;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  body {
+    @apply font-body leading-relaxed;
+  }
+}
+
+/* ── Component layer ─────────────────────────────────────── */
+@layer components {
+
+  /* Primary CTA button */
+  .btn-leaf {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full bg-leaf text-white font-semibold text-base transition-all duration-200 ease-in-out hover:bg-leaf-dark hover:shadow-lg hover:shadow-leaf/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-leaf active:scale-[0.97];
+  }
+
+  /* Secondary CTA button */
+  .btn-sky {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full bg-sky text-white font-semibold text-base transition-all duration-200 ease-in-out hover:bg-sky-dark hover:shadow-lg hover:shadow-sky/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky active:scale-[0.97];
+  }
+
+  /* Ghost / outline button */
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full border-2 border-leaf text-leaf font-semibold text-base transition-all duration-200 ease-in-out hover:bg-leaf hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-leaf active:scale-[0.97];
+  }
+
+  /* Soft card */
+  .card {
+    @apply bg-white rounded-card p-6 border border-gray-100 shadow-sm transition-all duration-300 ease-in-out hover:shadow-md hover:-translate-y-1;
+  }
+
+  /* Section wrapper */
+  .section-wrapper {
+    @apply max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 py-16 md:py-24;
+  }
+
+  /* Section title */
+  .section-title {
+    @apply font-display text-3xl sm:text-4xl font-bold text-ink mb-4;
+  }
+
+  /* Section subtitle */
+  .section-subtitle {
+    @apply text-gray-600 text-lg sm:text-xl max-w-2xl leading-relaxed;
+  }
+}
+
+/* ── Scroll-reveal animation ─────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ── Mobile menu overlay ─────────────────────────────────── */
+.mobile-menu-enter {
+  animation: slide-in 0.25s ease-out forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
