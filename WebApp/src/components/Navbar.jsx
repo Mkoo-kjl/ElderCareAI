@@ -8,7 +8,7 @@ const NAV_LINKS = [
   { label: 'Contact', href: '#contact' },
 ];
 
-export default function Navbar() {
+export default function Navbar({ isAuthenticated, onNavigateAdmin }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -55,6 +55,12 @@ export default function Navbar() {
               {label}
             </a>
           ))}
+          <button
+            onClick={onNavigateAdmin}
+            className="text-sm font-semibold text-ink/75 hover:text-leaf transition-colors duration-200 cursor-pointer"
+          >
+            {isAuthenticated ? 'Admin Dashboard' : 'Admin Portal'}
+          </button>
           <a href="#contact" className="btn-leaf text-sm !px-5 !py-2">
             Contact Us
           </a>
@@ -97,6 +103,15 @@ export default function Navbar() {
                 {label}
               </a>
             ))}
+            <button
+              onClick={() => {
+                setMenuOpen(false);
+                onNavigateAdmin();
+              }}
+              className="text-lg font-medium text-ink hover:text-leaf transition-colors cursor-pointer"
+            >
+              {isAuthenticated ? 'Admin Dashboard' : 'Admin Portal'}
+            </button>
             <a
               href="#contact"
               className="btn-leaf mt-4 w-full text-center"

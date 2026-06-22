@@ -5,19 +5,19 @@ const MEMBERS = [
     name: 'Melvence R. Bagonggong',
     role: 'Hacker',
     program: 'BS Information Technology',
-    image: '/member 1.jpg',
+    image: '/member%201.jpg',
   },
   {
     name: 'Kristoffer James G. Layos',
     role: 'Project Manager',
     program: 'BS Information Technology',
-    image: '/member 2.png',
+    image: '/member%202.png',
   },
   {
     name: 'John Wayne C. Planos',
     role: 'Hipster/ Designer',
     program: 'BS Information Technology',
-    image: '/member 3.jpg',
+    image: '/member%203.jpg',
   },
 ];
 

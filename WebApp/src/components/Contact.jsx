@@ -133,10 +133,6 @@ export default function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </button>
-
-                <p className="text-xs text-gray-400 font-mono">
-                  [PLACEHOLDER — replace CONTACT_EMAIL with your real address]
-                </p>
               </form>
             ) : (
               <div className="text-center py-12">
