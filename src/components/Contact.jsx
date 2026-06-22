@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ScrollReveal from './ScrollReveal';
 
-const CONTACT_EMAIL = 'eldercare.ai.capstone@gmail.com'; // [PLACEHOLDER — replace with real email]
+const CONTACT_EMAIL = 'eldercare.ai.capstone@gmail.com';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
